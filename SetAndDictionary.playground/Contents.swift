@@ -18,9 +18,25 @@ for i in cities2 { // add cities to Sulayman Sets
 }
 
 //3. List all the cities visited by them together
-Ahmed.intersection(Sulayman)
+let allCities = Ahmed.intersection(Sulayman)
 
+var str = ""
+var numCities = allCities.count
 
+allCities.map{i in
+    if allCities.first == i {
+        str.append(i)
+    } else if numCities == 1 {
+        str.append(" and \(i)")
+    } else {
+        str.append(", \(i)")
+    }
+    
+    numCities -= 1
+}
+print("Ahmed and Sulayman visited \(str).")
+
+print("\n")
 
 //Dictionary
 //1. Create an empty dictionary for Ahmed and Sulayman
@@ -37,12 +53,12 @@ for idx in cities2 {
 //3. Print all the cities Ahmed visited along with its frequency
 print("Ahmad viseted \(Ahmed.count) cities In Saudi Arabia")
 for (key, value) in Ahmed_d {
-    print("Ahmed visited \(key) \(value) times!")
+    print("Ahmed visited \(key) \(value) times.")
 }
 //4. Same above for Sulayman
 print("\n") // new line
 
 print("Sulayman viseted \(Sulayman.count) cities In Saudi Arabia")
 for (city, visited) in Sulayman_d {
-    print("Sulayman visited \(city) \(visited) times!")
+    print("Sulayman visited \(city) \(visited) times.")
 }
