@@ -17,7 +17,7 @@ print(Ahmad)
 
 
 
-// لطباعتها مع الترتيب أضفنا sorted
+// لطباعتها بالترتيب أضفنا sorted
 print(Ahmad.union(Suliman).sorted())
 
 print(Ahmad.intersection(Suliman).sorted())
@@ -81,7 +81,7 @@ print("")
 
 
 
-
+// أكثر مدينة زارها suliman
 var largest2 = 0
 var largestkind2 = ""
 for (kind, numbers) in suliman {
